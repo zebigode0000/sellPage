@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1B1F24;
+}
+:root{
+    --fonte-principal: 'Montserrat';
+    --tamanho-base-fonte: 16px;
+}
+#logo{
+    text-align: center;
+    font-family: var(--fonte-principal);
+    color: #00FFFF;
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 35px;
+    text-shadow: #00FFFF 0.1px 0.1px 7px;
+}
+#text-banner{
+    font-family: var(--fonte-principal);
+    color: white;
+    display: flex;
+    overflow: hidden;
+}
+#img-banner img{
+    transform: scale(1.1);
+    image-rendering: pixelated;
+    image-rendering: optimizeQuality;
+    
+    
+}
+#principal-text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 40px;
+    max-width: 1000px;
+    
+}
+
+#btt-principal{
+    background-color: #00FFFF;
+    padding: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    box-shadow: 1px 1px 5px 0.2px aqua;
+}
+@media(max-width:1100px){
+    #text-banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #principal-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #img-banner img{
+        width: 90vw;
+    }
+}
+.painel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,rgba(0, 255, 255, 0.75) 0%, rgba(3, 143, 143, 1) 57%, rgba(0, 0, 0, 0.75) 100%);
+    border-radius: 20px;
+    margin: 30px 40px;
+    font-family: var(--fonte-principal);
+}
+.escrita-painel{
+    font-size: 10px;
+    padding: 20px;
+}
+.beneficio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 810px;
+    padding: 30px;
+    color: white;
+}
+@media(max-width:1000px) {
+    .painel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 35px 30px;
+    }
+}
