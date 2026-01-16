@@ -71,7 +71,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(180deg,rgba(0, 255, 255, 0.75) 0%, rgba(3, 143, 143, 1) 57%, rgba(0, 0, 0, 0.75) 100%);
+    background: linear-gradient(180deg,rgba(0, 255, 255, 0.75) 0%, rgba(3, 143, 143, 1) 57%, rgba(14, 14, 14, 0.75) 100%);
     border-radius: 20px;
     margin: 30px 40px;
     font-family: var(--fonte-principal);
@@ -94,5 +94,116 @@ body{
         flex-direction: column;
         align-items: center;
         margin: 35px 30px;
+    }
+}
+.escritas{
+    font-family: var(--fonte-principal);
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    color: white;
+}
+.escrita{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: larger;
+    padding: 10px;
+}
+.escrita-text{
+    display: flex;
+    justify-content: center;
+    max-width: 1600px;
+}
+.title-escritas{
+    text-align: center;
+}
+.icon{
+    
+  background: linear-gradient(131deg,rgba(0, 255, 255, 1) 0%, rgb(34, 179, 179) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media(max-width:800px){
+    .escritas{
+        display: flex;
+        flex-direction: column;
+    }
+    .escrita-text{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.gradient-border {
+    margin: 30px;
+  padding: 5px; 
+  border-radius: 20px;
+  background: linear-gradient(90deg,rgba(0, 255, 255, 1) 0%, rgba(34, 201, 201, 1) 50%, rgba(0, 74, 235, 1) 100%);
+}
+
+.conteudo {
+  background: #fff1f4; 
+  border-radius: 17px;
+  padding: 40px;
+  display: flex;
+    justify-content: space-around;
+    font-family: var(--fonte-principal);
+
+}
+.website{
+    padding: 20px;
+    max-width: 1000px;
+}
+.web1{
+    color: rgb(90, 90, 90);
+}
+.web2 h1{
+    color: #00ffff;
+}
+@media(max-width:900px){
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.servicos{
+    font-family: var(--fonte-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 40px;
+
+}
+.servicos h1{
+    text-align: center;
+    max-width: 800px;
+}
+.servicostxt{
+    display: flex;
+    justify-content: center;
+}
+.servtxt{
+   background-color: #1B1F24;
+   padding: 20px;
+   margin: 10px;
+   border-radius: 16px;
+   font-size: 17px;
+   max-width: 400px;
+   font-weight: 600;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex: 1;
+   border: 2px solid #00ffff;
+}
+@media(max-width:1000px){
+    .servicostxt{
+        display: flex;
+        flex-direction: column;
+    }
+    .servtxt{
+        max-width: 600px;
     }
 }
