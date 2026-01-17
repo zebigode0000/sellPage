@@ -144,7 +144,7 @@ body{
 .conteudo {
   background: #fff1f4; 
   border-radius: 17px;
-  padding: 40px;
+  padding: 20px;
   display: flex;
     justify-content: space-around;
     font-family: var(--fonte-principal);
@@ -164,6 +164,7 @@ body{
     .conteudo{
         display: flex;
         flex-direction: column;
+        padding: 0px;
     }
 }
 
