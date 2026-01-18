@@ -9,7 +9,146 @@ body{
     --fonte-principal: 'Montserrat';
     --tamanho-base-fonte: 16px;
 }
+
+  @keyframes aparecerside{
+    0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.1);
+    filter: blur(6px);
+    scale: 0;
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.02);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes esquerda{
+    from {
+        translate: -500px 0;
+        opacity: 0;
+    } to{
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+@keyframes logoIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes textIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes flutuar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes btnIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes imgIn {
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes tituloIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconPop {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes tituloIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blocoIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconPop {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes tituloIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textoIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blocoIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes btnIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 #logo{
+    opacity: 0;
+    transform: translateY(-20px);
     text-align: center;
     font-family: var(--fonte-principal);
     color: #00FFFF;
@@ -17,6 +156,7 @@ body{
     font-weight: 700;
     font-size: 35px;
     text-shadow: #00FFFF 0.1px 0.1px 7px;
+    animation: logoIn 0.8s ease-out forwards;
 }
 #text-banner{
     font-family: var(--fonte-principal);
@@ -24,11 +164,23 @@ body{
     display: flex;
     overflow: hidden;
 }
+.destaque {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.8);
+  animation:
+    popIn 0.7s cubic-bezier(.34,1.56,.64,1) forwards,
+    flutuar 2.5s ease-in-out infinite;
+  animation-delay: 0.5s, 1.3s;
+  color: aqua;
+}
 #img-banner img{
-    transform: scale(1.1);
     image-rendering: pixelated;
     image-rendering: optimizeQuality;
-    
+    opacity: 0;
+    transform: translateX(40px) scale(0.95);
+    animation: imgIn 1s ease-out forwards;
+    animation-delay: 0.5s;
     
 }
 #principal-text{
@@ -38,7 +190,22 @@ body{
     justify-content: center;
     margin: 40px;
     max-width: 1000px;
-    
+    opacity: 0;
+    transform: translateY(30px);
+    animation: textIn 0.9s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-delay: 0.2s;
+}
+#principal-text p:nth-of-type(1) {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.8s ease-out forwards;
+  animation-delay: 0.6s;
+}
+#principal-text p:nth-of-type(2) {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.6s ease-out forwards;
+  animation-delay: 1s;
 }
 
 #btt-principal{
@@ -49,7 +216,13 @@ body{
     color: rgb(253, 253, 253);
     font-weight: 500;
     box-shadow: 1px 1px 5px 0.2px aqua;
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: btnIn 0.8s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-delay: 0.8s;
 }
+
 @media(max-width:1100px){
     #text-banner{
         display: flex;
@@ -81,6 +254,13 @@ body{
     font-size: 10px;
     padding: 20px;
 }
+.escrita-painel h1 {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: tituloIn linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
 .beneficio{
     display: flex;
     flex-direction: column;
@@ -88,7 +268,41 @@ body{
     max-width: 810px;
     padding: 30px;
     color: white;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: cardIn linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
 }
+.beneficio i {
+  transform: scale(0.7);
+  animation: iconPop linear forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 40%;
+}
+.beneficio:nth-of-type(1) {
+  animation-range: entry 10% cover 40%;
+}
+
+.beneficio:nth-of-type(2) {
+  animation-range: entry 20% cover 50%;
+}
+
+.beneficio:nth-of-type(3) {
+  animation-range: entry 30% cover 60%;
+}
+.beneficio:nth-of-type(1) i {
+  animation-range: entry 15% cover 40%;
+}
+
+.beneficio:nth-of-type(2) i {
+  animation-range: entry 25% cover 50%;
+}
+
+.beneficio:nth-of-type(3) i {
+  animation-range: entry 35% cover 60%;
+}
+
 @media(max-width:1000px) {
     .painel{
         display: flex;
@@ -110,6 +324,11 @@ body{
     align-items: center;
     font-size: larger;
     padding: 10px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: blocoIn linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 45%;
 }
 .escrita-text{
     display: flex;
@@ -119,12 +338,45 @@ body{
 .title-escritas{
     text-align: center;
 }
+.title-escritas h1 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: tituloIn linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
 .icon{
-    
   background: linear-gradient(131deg,rgba(0, 255, 255, 1) 0%, rgb(34, 179, 179) 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: scale(0.6);
+  animation: iconPop linear forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 45%;
 }
+.escrita:nth-child(1) {
+  animation-range: entry 10% cover 40%;
+}
+
+.escrita:nth-child(2) {
+  animation-range: entry 20% cover 50%;
+}
+
+.escrita:nth-child(3) {
+  animation-range: entry 30% cover 60%;
+}
+.escrita:nth-child(1) .icon {
+  animation-range: entry 15% cover 40%;
+}
+
+.escrita:nth-child(2) .icon {
+  animation-range: entry 25% cover 50%;
+}
+
+.escrita:nth-child(3) .icon {
+  animation-range: entry 35% cover 60%;
+}
+
 @media(max-width:800px){
     .escritas{
         display: flex;
@@ -155,6 +407,14 @@ body{
     padding: 20px;
     max-width: 1000px;
 }
+.website h1,
+.website p{
+    animation: esquerda 1.5s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
 .web1{
     color: rgb(90, 90, 90);
 }
@@ -182,6 +442,11 @@ body{
     text-align: center;
     max-width: 800px;
 }
+.servicos h1{
+    animation: aparecerside 1.5s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
 .servicostxt{
     display: flex;
     justify-content: center;
@@ -199,6 +464,15 @@ body{
    align-items: center;
    flex: 1;
    border: 2px solid #00ffff;
+   transition: 0.3s all ease;
+   animation: aparecerside 1.5s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
+.servtxt:hover{
+    transform: scale(1.04);
 }
 @media(max-width:1000px){
     .servicostxt{
@@ -217,8 +491,20 @@ body{
     color: #ffff;
     
 }
+.resultados1 h1 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: tituloIn linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
 .resultados1 p{
     color: rgb(146, 146, 146);
+    opacity: 0;
+  transform: translateY(20px);
+  animation: textoIn linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 35%;
 }
 .resultados2{
     color: #00FFFF;
@@ -247,10 +533,30 @@ body{
 }
 .results{
     display: flex;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: blocoIn linear forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+}
+.results:nth-child(1) {
+  animation-range: entry 20% cover 45%;
+}
+
+.results:nth-child(2) {
+  animation-range: entry 30% cover 55%;
 }
 .button2{
     margin: 30px;
     
+}
+.button2 a {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: btnIn linear forwards;
+  animation-timeline: view();
+  animation-range: entry 35% cover 60%;
 }
 .logoimg{
     display: flex;
@@ -286,6 +592,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 20px;
 }
 .funcionamento span{
     color: #00FFFF;
