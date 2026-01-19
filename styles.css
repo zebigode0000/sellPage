@@ -13,7 +13,7 @@ body{
   @keyframes aparecerside{
     0% {
     opacity: 0;
-    transform: translateY(50px) scale(0.1);
+    transform: translateY(10px) scale(0.1);
     filter: blur(6px);
     scale: 0;
   }
@@ -449,9 +449,13 @@ body{
     max-width: 800px;
 }
 .servicos h1{
-    animation: aparecerside 1.5s cubic-bezier(.34,1.56,.64,1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+   animation: textIn 0.9s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-delay: 1s;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
+    animation-fill-mode: both;
 }
 .servicostxt{
     display: flex;
@@ -470,16 +474,15 @@ body{
    align-items: center;
    flex: 1;
    border: 2px solid #00ffff;
-   transition: 0.3s all ease;
-   animation: aparecerside 1.5s cubic-bezier(.34,1.56,.64,1) forwards;
+   opacity: 0;
+    transform: translateY(30px);
+   animation: textIn 0.9s cubic-bezier(.34,1.56,.64,1) forwards;
+    animation-delay: 1s;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
-    animation-delay: 0.7s;
     animation-fill-mode: both;
 }
-.servtxt:hover{
-    transform: scale(1.04);
-}
+
 @media(max-width:1000px){
     .servicostxt{
         display: flex;
