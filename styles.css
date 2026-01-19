@@ -414,6 +414,7 @@ body{
 }
 .website h1,
 .website p{
+  opacity: 0;
     animation: esquerda 1.5s cubic-bezier(.34,1.56,.64,1) forwards;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -656,4 +657,78 @@ body{
 a[href^="tel"] {
     color: inherit !important;
     text-decoration: none !important;
+}
+.faq{
+  font-family: var(--fonte-principal);
+  color: white;
+  overflow: hidden;
+  min-width: 320px;
+  padding: 5%;
+}
+.faq h1{
+  text-align: center;
+}
+.faq summary{
+  font-weight: 600;
+  background-color: #15191D;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  list-style: none;
+  cursor: pointer;
+}
+.faq .conteudoSum{
+  padding: 0px 15px;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition:
+    height 0.45s ease,
+    opacity 0.3s ease;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #00ffff;
+  margin-right: 12px;
+  filter: drop-shadow(0 0 6px #00ffff);
+  transition: transform 0.3s ease;
+}
+summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+details[open] .arrow {
+  transform: rotate(90deg);
+}
+
+details .conteudoSum {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: 
+    max-height 0.6s ease,
+    opacity 0.3s ease,
+    transform 2s ease;
+}
+details[open] .conteudoSum {
+  max-height: 1000px; 
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: tituloIn linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
 }
