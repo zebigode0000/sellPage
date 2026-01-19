@@ -640,3 +640,14 @@ body{
     }
 
 }
+
+.inf1 p a, 
+.inf1 p {
+    color: inherit; /* Faz o link herdar a cor do texto do pai (branco) */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+a[href^="tel"] {
+    color: inherit !important;
+    text-decoration: none !important;
+}
