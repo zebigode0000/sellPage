@@ -475,8 +475,8 @@ body{
    flex: 1;
    border: 2px solid #00ffff;
    opacity: 0;
-    transform: translateY(30px);
-   animation: textIn 0.9s cubic-bezier(.34,1.56,.64,1) forwards;
+    transform: translateY(120px);
+   animation: textIn 1s cubic-bezier(.34,1.56,.64,1) forwards;
     animation-delay: 1s;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
