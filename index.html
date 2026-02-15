@@ -3,314 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title></title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-</style>
+        body{
+            overflow-x: hidden;
+        }
+        .aparecerdir{
+            animation:aparecerdir 1s ease forwards
+        }
+        .aparecer{
+            animation: subir 1s ease forwards ;
+        }
+        .aparecerslide{
+            animation: aparecerslide 1s ease forwards;
+        }
+        .apareceresq{
+            animation: apareceresq 1s ease forwards
+        }
+        .esconder{
+            opacity: 0;
+            pointer-events: none;
+        }
+        @keyframes aparecerslide{
+            from{
+                transform: translateX(20px);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes subir{
+            from{
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes apareceresq{
+            from{
+                transform: translateX(-40px);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+        @keyframes aparecerdir{
+            from{
+                transform: translateX(40px);
+                opacity: 0;
+            }
+            to{
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <h1 id="logo">AuGitDev</h1>
-    </header>
-    <section>
-        <div id="text-banner">
-            <div id="principal-text">
-                <h1>Criamos sites que transformam visitantes em <Span style="color: aqua;" class="destaque">CLIENTES</Span></h1>
-                <p>Desenvolvemos sites modernos, rápidos e responsivos para empresas que querem crescer no digital.</p>
-                <a href="https://wa.me/5511985149353?text=Olá! Vi seu site e gostaria de um orçamento para um projeto." id="btt-principal"><i class="fa-regular fa-comments" style="padding-right: 10px;"></i>Entrar em Contato</a>
-                <p><i class="fa-solid fa-hammer" style="padding-right: 5px;"></i>Sites institucionais • Landing pages • Projetos sob medida</p>
-            </div>
-            <div id="img-banner">
-                <img src="banner1.png" alt="">
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="painel">
-            <div class="escrita-painel">
-                <h1 style="color: aliceblue;">O QUE PODEMOS FAZER <br> Por você? </h1>
-            </div>
-            <div class="beneficio">
-                <i class="fa-solid fa-laptop-code fa-4x"></i>
-                <p>Criamos sites com visual profissional, totalmente personalizados, incluindo botão de contato direto para o WhatsApp. Tudo pensado para funcionar perfeitamente em celulares e computadores.</p>
-            </div>
-            <div class="beneficio">
-                <i class="fa-solid fa-fire fa-4x"></i>
-                <p>Criamos sites estratégicos pensados para converter visitantes em clientes, com estrutura otimizada para captação de contatos e resultados reais.</p>
-            </div>
-            <div class="beneficio">
-                <i class="fa-solid fa-spiral fa-4x"></i>
-                <p>Desenvolvemos a identidade visual da sua empresa, desde o logotipo até materiais gráficos, garantindo uma presença forte, coerente e profissional no mercado.</p>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="escritas">
-                <div class="title-escritas">
-                    <h1>Tenha um site preparado para todas as situações <span style="color: #00ffff;"> EM POUCOS DIAS </span> que:</h1>
-                </div>
-            <div class="escrita-text">
-                <div class="escrita">
-                    <i class="fa-solid fa-computer icon fa-6x" ></i>
-                    <p>Funciona perfeitamente em celulares, tablets e computadores</p>
-                </div>
-                <div class="escrita">
-                    <i class="fa-solid fa-magnifying-glass-dollar fa-6x icon"></i>
-                    <p>Transforma visitantes em contatos direto no seu WhatsApp</p>
-                </div>
-                <div class="escrita">
-                    <i class="fa-solid fa-magnet fa-6x icon"></i>
-                    <p>É preparado para aparecer nos mecanismos de busca</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="gradient-border">
-            <div class="conteudo">
-              <div class="website web1">
-                <h1>Sem WebSite</h1>
-                <p><i class="fa-solid fa-x "></i>Passa uma imagem menos profissional ao público.</p>
-                <p><i class="fa-solid fa-x"></i></i>Seu negócio aparenta ser menor do que realmente é.</p>
-                <p><i class="fa-solid fa-x"></i>Diminui a confiança do cliente na sua marca.</p>
-                <p><i class="fa-solid fa-x"></i>Seus clientes não conseguem enxergar todos os serviços que você oferece.</p>
-              </div>
-              <div class="website web2">
-                <h1>Com WebSite</h1>
-                <p><i class="fa-solid fa-circle-check" style="color: #00ffff;"></i>Transmite uma imagem profissional e confiável.</p>
-                <p><i class="fa-solid fa-circle-check" style="color: #00ffff;"></i>Seu negócio é visto como maior e mais estruturado.</p>
-                <p><i class="fa-solid fa-circle-check" style="color: #00ffff;" ></i>Os clientes se sentem mais seguros em fechar com você.</p>
-                <p><i class="fa-solid fa-circle-check" style="color: #00ffff;"></i>Seus serviços ficam claros, aumentando as chances de conversão.</p>
-              </div>
-            </div>
-        </div>
-    </section>
-    <section>
-    <div class="servicos">
+<body class="relative bg-[#0E111C] flex justify-center">
+<main class="max-w-7xl">
+    <section class="">
         <div>
-        <h1>Criamos sites personalizados, feitos do <span style="color: #00ffff;">ZERO</span> para o que você precisa.</h1>
+            <nav class="bg-black text-white p-5 w-full flex justify-between items-center font-sans">
+                <a href="#home" class="flex items-center text-xl md:text-2xl font-bold leading-tight">
+                <img src="pyramid.svg" alt="" class="w-12 mr-3 cursor-pointer esconder" data-anim="aparecer">
+    
+                <div class="flex flex-col cursor-default esconder" data-anim="aparecer">
+                    <span>Augusto</span>
+                    <span class="text-cyan-500">Codes</span>
+                </div>
+                </a>
+
+                <a href="" class="text-base border border-2 border-cyan-500 p-2 rounded text-cyan-500 font-semibold flex items-center cursor-pointer esconder" data-anim="aparecerdir"><img src="send.svg" alt="" class="pr-1">Fazer um orçamento</a>
+            </nav>
         </div>
-        <div class="servicostxt">
-        <div class="servtxt">
-            <i class="fa-solid fa-comments-dollar fa-2x"></i>
-            <p><span style="color: #00ffff;">Criamos landing pages </span>estratégicas focadas em conversão, ideais para anúncios e campanhas no WhatsApp. Uma solução rápida, eficiente e com alto potencial de gerar resultados em pouco tempo.</p>
+    </section>
+    <section class="w-full flex flex-col md:flex-row md:w-2/2">
+        <div class="p-4 w-full md:w-1/2 md:flex md:flex-col md:justify-center">
+            <h1 class="text-white text-4xl  font-bold px-4 pt-4 md:text-5xl pb-4 esconder" data-anim="apareceresq">Posicione sua <span class="text-cyan-500">marca</span> no <span class="text-cyan-500">topo</span> e aumente seus orçamentos</h1>
+            <h4 class="text-white px-4 esconder" data-anim="apareceresq" data-aos-delay="100">Unimos design de elite e tecnologia de ponta para criar a presença digital que sua empresa merece. Pare de perder vendas por ter um site amador.</h4>
+            <div class="flex justify-center hidden md:flex md:justify-start p-4">
+                <a href="" class="w-xs p-2 bg-cyan-500 text-center rounded-xl my-2 font-bold text-gray-200 tracking-widest esconder" data-anim="apareceresq">Fazer um orçamento Gratuito<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="text-gray-400 font-semibold p-1 px-2 ml-4 mt-4 border rounded-full border-2 border-cyan-500 w-max md:hidden cursor-default esconder" data-anim="apareceresq">+20 Clientes Satisfeitos   </div>
         </div>
-        <div class="servtxt">
-            <i class="fa-solid fa-store fa-2x"></i>
-            <p><span style="color: #00ffff;">Desenvolvemos sites institucionais</span> completos que fortalecem a presença digital da sua empresa, transmitem credibilidade e ajudam seu negócio a se posicionar de forma profissional no mercado.</p>
+        <div class="relative p-4">
+            <img src="banner6.png" class="saturate-110 esconder" data-anim="aparecerdir" alt="">
+            <div class="absolute border border-2 text-white font-bold border-cyan-500 p-4 rounded-full invisible md:visible md:bottom-10 md:left-[-20px] cursor-default" data-aos="fade-up-left" data-aos-delay="100">+20 Clientes satisfeitos</div>
         </div>
-        <div class="servtxt">
-            <i class="fa-solid fa-user-tie fa-2x"></i>
-            <p><span style="color: #00ffff;">Criamos portfólios</span> modernos e personalizados para profissionais que desejam apresentar seus trabalhos com clareza, estilo e profissionalismo, valorizando sua imagem e sua carreira.</p>
+        <div class="w-full flex justify-center md:hidden">
+            <a href="" class="w-xs p-2 bg-cyan-500 text-center rounded-xl my-2 font-semibold text-white tracking-widest esconder" data-anim="aparecer">Fazer um orçamento gratuito<i class="fa-solid fa-arrow-right" style="padding-left: 10px;"></i></a>
         </div>
-        <div class="servtxt">
-            <i class="fa-solid fa-desktop fa-2x"></i>
-            <p><span style="color: #00ffff;">Desenvolvemos sites one page</span> simples e objetivos, ideais para pequenos negócios que buscam presença online, baixo investimento e alta taxa de conversão.</p>
+    </section>
+    <section class="pt-12">
+        <div class="w-full flex justify-center text-3xl md:text-5xl">
+            <h1 class="pt-10 px-10 text-center font-sans font-bold text-white pb-4 esconder" data-anim="aparecer">Se você se encontra em alguma dessas situações,  <span class="text-cyan-500">está na hora de mudar!</span> </h1>
         </div>
+        <div class="w-full flex flex-col items-center p-4 md:flex-row md:justify-between gap-4">
+            <div class="w-full h-auto lg:h-56 relative text-white bg-gray-900 p-4 mb-4 rounded-xl border border-gray-600 esconder" data-anim="aparecer">
+                <div class="absolute bg-cyan-500 w-16 h-2 top-0 left-4" ></div>
+                <span class="bg-cyan-500 px-4 rounded-xl font-bold">1.</span>
+                <p class="pt-3 font-semibold">Você é o melhor da região, mas quando alguém busca no Google, só encontra o seu concorrente (que talvez nem seja tão bom quanto você)</p>
+            </div>
+            <div class="relative w-full h-auto lg:h-56 text-white bg-gray-900 p-4 mb-4 rounded-xl border border-gray-600 esconder" data-anim="aparecer">
+                <div class="absolute bg-cyan-500 w-16 h-2 top-0 left-4"></div>
+                <span class="bg-cyan-500 px-4 rounded-xl font-bold">2.</span>
+                <p class="pt-3 font-semibold">Você atrai pessoas pelo Instagram ou indicação, mas quando elas clicam no seu site lento e antigo, desistem e fecham com outro por falta de confiança.</p>
+            </div>
+            <div class="relative w-full h-auto lg:h-56 text-white bg-gray-900 p-4 mb-4 rounded-xl border border-gray-600 esconder" data-anim="aparecer">
+                <div class="absolute bg-cyan-500 w-16 h-2 top-0 left-4"></div>
+                <span class="bg-cyan-500 px-4 rounded-xl font-bold">3.</span>
+                <p class="pt-3 font-semibold">Suas vendas dependem da "sorte" de o Instagram entregar seus posts. Se a rede social cair hoje, seu faturamento morre junto com ela.</p>
+            </div>
+            <div class="relative w-full h-auto lg:h-56 text-white bg-gray-900 p-4 mb-4 rounded-xl border border-gray-600 esconder" data-anim="aparecer">
+                <div class="absolute bg-cyan-500 w-16 h-2 top-0 left-4"></div>
+                <span class="bg-cyan-500 px-4 rounded-xl font-bold">4.</span>
+                <p class="pt-3 font-semibold">Você sente um frio na barriga quando um cliente pede seu site, porque sabe que aquela página amadora não condiz com a qualidade do seu serviço.</p>
+            </div>
+        </div>
+    </section>
+    <section class="pt-12 w-full flex flex-col md:flex-row items-center">
+    
+    <div class="p-4 w-full md:w-1/2 flex flex-col justify-center">
+        <div class="w-full p-4 pb-12 md:hidden">
+            <img src="eu.png" class="rounded-3xl w-full h-74 object-cover object-center shadow-[0_0_50px_rgba(6,182,212,0.2)] esconder" data-anim="aparecer" alt="Augusto Codes IA"> 
+        </div>
+        <div class="text-white text-3xl md:text-5xl font-bold pb-4 esconder" data-anim="apareceresq">
+            <h1><span class="text-cyan-500" >Seja honesto consigo</span> mesmo... </h1>
+        </div>
+        <div class="flex flex-col text-white font-semibold gap-4 pt-4">
+            <p class="esconder" data-anim="apareceresq"><i class="fa-solid fa-circle-check text-cyan-500 pr-4"></i>Quantos clientes o seu concorrente 'roubou' hoje só porque ele apareceu no Google e você não?</p>
+            <p class="esconder" data-anim="apareceresq"><i class="fa-solid fa-circle-check text-cyan-500 pr-4"></i>Já calculou quanto dinheiro você deixa na mesa sendo invisível para quem já está pronto para comprar?</p>
+            <p class="esconder" data-anim="apareceresq"><i class="fa-solid fa-circle-check text-cyan-500 pr-4"></i>Até quando empresas piores que a sua vão ficar com os melhores clientes só por causa de um site?</p>
+            <p class="esconder" data-anim="apareceresq"><i class="fa-solid fa-circle-check text-cyan-500 pr-4"></i>Quantas pessoas desistiram de contratar você após verem um site lento, confuso ou amador?</p>
+            <p class="esconder" class="pb-8 text-xl font-normal" data-anim="apareceresq">Se <span class="font-bold">você sente que seu faturamento está em risco</span>, clique abaixo e construa seu terreno próprio na internet hoje mesmo.</p>
+            
+            <div class="flex justify-center md:justify-start w-full">
+                <a href="" class="w-full md:w-76 bg-cyan-500 text-center rounded-xl p-3 font-semibold tracking-widest hover:bg-cyan-400 transition-all esconder" data-anim="apareceresq">
+                    Fazer orçamento Gratuito<i class="fa-solid fa-arrow-right pl-2"></i>
+                </a>
+            </div>
         </div>
     </div>
-    </section>
-    <section>
-        <div class="resultados">
-            <div class="resultados1">
-                <h1>Resultados reais para o seu negócio</h1>
-                <p>Desenvolvemos sites com foco em conversão, performance e profissionalismo, ajudando negócios a conquistarem mais visibilidade, confiança e oportunidades online.</p>
-            </div>
-            <div class="resultados2">
-                <div class="results">
-                    <p>+ Contatos no Whatsapp </p>  
-                    <p>+ Design Profissional</p>  
-                </div>
-                <div class="results">
-                    <p>+ Estrutura foca em conversão</p>  
-                    <p>+ Excelente experiencia mobile</p>
-                </div>
-            </div>
-            <div class="button2">
-                <a href="https://wa.me/5511985149353?text=Olá! Vi seu site e gostaria de um orçamento para um projeto.">Entrar em contato</a>
+
+    <div class="hidden w-full md:w-1/2 md:flex md:justify-center md:items-center p-4">
+        <img src="eu.png" class="rounded-3xl w-full h-130 object-cover shadow-[0_0_50px_rgba(6,182,212,0.2)] esconder" data-anim="aparecerdir"alt="Augusto Codes IA"> 
+    </div>
+
+</section>
+<section>
+    <div class="w-full p-4 pt-12">
+        <p class="bg-white/5 backdrop-blur-md border border-cyan-500/50 rounded-2xl text-white font-semibold px-2 w-max esconder" data-anim="apareceresq">Beneficio</p>
+        <h1 class="py-3 text-white text-3xl md:text-5xl font-bold esconder" data-anim="apareceresq">A Solução <span class="text-cyan-500" >Definitiva</span> para colocar sua empresa no topo</h1>
+    </div>
+    <div class="p-4 pt-5 grid md:grid-cols-2 gap-10">
+        <div class="text-white bg-gray-900 p-4 rounded-xl esconder" data-anim="apareceresq"> 
+            
+            <h1 class="font-bold text-2xl ">Pare de ser um "Fantasma" no Google!<i class="fa-solid fa-ghost" style="color: rgba(0, 184, 219, 1.00);"></i></h1>
+            <p class="font-semibold text-xl py-4">Configuramos sua empresa para dominar as buscas locais (SEO Local) e o Google Maps.</p>
+            <blockquote>"Enquanto seu concorrente dorme, você aparece para quem está com o cartão na mão pronto para comprar "perto de mim"</blockquote>
+        </div>
+        <div class="text-white bg-gray-900 p-4 rounded-xl esconder" data-anim="aparecerdir"> 
+            
+            <h1 class="font-bold text-2xl ">Transforme Cliques em Clientes!<i class="fa-solid fa-comment-dollar" style="color: rgba(0, 184, 219, 1.00);"></i></h1>
+            <p class="font-semibold text-xl py-4">Criamos uma estrutura de carregamento ultra-rápido com botões de contato estratégico.</p>
+            <blockquote>"Chega de "balde furado". Quem clicar no seu link vai encontrar um caminho fácil e profissional para fechar negócio com você em segundos."</blockquote>
+        </div>
+        <div class="text-white bg-gray-900 p-4 rounded-xl esconder" data-anim="apareceresq"> 
+            
+            <h1 class="font-bold text-2xl ">Independência Total!<i class="fa-solid fa-earth-europe" style="color: rgba(0, 184, 219, 1.00);"></i></h1>
+            <p class="font-semibold text-xl py-4">Um domínio e site que pertencem a você, sem depender da boa vontade do algoritmo do Instagram.</p>
+            <blockquote>"Durma tranquilo sabendo que, mesmo que as redes sociais caiam, sua vitrine principal continua no ar gerando vendas 24h por dia."</blockquote>
+        </div>
+        <div class="text-white bg-gray-900 p-4 rounded-xl esconder" data-anim="aparecerdir"> 
+            
+            <h1 class="font-bold text-2xl ">Credibilidade que Vende por Você!<i class="fa-solid fa-check-double" style="color: rgba(0, 184, 219, 1.00);"></i></h1>
+            <p class="font-semibold text-xl py-4">Um design Premium que transmite confiança imediata e autoridade máxima.</p>
+            <blockquote>"Sinta orgulho de compartilhar seu link e veja o fim da "guerra de preços". Quando seu site parece o melhor, o cliente para de questionar o seu valor."</blockquote>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-full pt-12 flex flex-col p-4 md:w-2/2 md:flex-row md:gap-4">
+        <div class="w-full esconder" data-anim="apareceresq">
+            <img class="w-full h-97 md:h-130 object-cover object-center rounded-xl" src="eu2.png" alt="">
+        </div>
+        <div class="w-full text-white pt-4">
+            <h1 class="text-3xl md:text-5xl font-bold esconder" data-anim="aparecer">Quem é <span class="text-cyan-500">Augusto</span>?</h1>
+            <p class="pt-4 text-lg"><span class="esconder" data-anim="aparecer">Augusto é um desenvolvedor paulista de 18 anos que transforma tecnologia em resultados. Sua missão é criar sites profissionais e estratégicos que elevam o patamar de presença online das empresas e aceleram o crescimento de negócios no digital.</span>
+                <br><br>
+            <span class="esconder" data-anim="aparecer">Unindo design moderno às ferramentas mais avançadas, ele desenvolve soluções focadas em autoridade e conversão. Sua metodologia equilibra perfeitamente a agilidade da nova geração com o rigor técnico necessário para dominar os mecanismos de busca e conquistar clientes.</span> <br> <br>
+
+            <span class="esconder" data-anim="aparecer">Reconhecido pela excelência e entrega impecável, Augusto prova que o sucesso digital vem do compromisso e da técnica. Ele representa o novo empreendedorismo de São Paulo, sendo a escolha ideal para marcas que buscam inovação e profissionalismo real.</span></p>
+            <div class="w-full flex justify-center pt-2">
+                <a href="" class="w-full bg-cyan-500 text-center p-2 rounded-xl font-semibold tracking-widest esconder" data-anim="aparecer"
+                >Fazer orçamento</a>
             </div>
         </div>
-    </section>
-    <section>
-        <div class="faq">
-            <h1>Perguntas Frequentes</h1>
-
-            <details>
-                <summary class="sumFaq"><span class="arrow"></span>    Quem sou eu?</summary>
-                <div class="conteudoSum">
-                    <p style="font-weight: 600;">Augusto é um jovem Desenvolvedor de Guarulhos, São Paulo, que aos 18 anos decidiu transformar a programação em sua profissão desde o primeiro contato com a área. Sempre teve claro que queria viver da criação de sites.
-                        <br><br>
-                    Antes de fundar a AuGitDev, estudou programação e atuou como estagiário, onde teve contato direto com as exigências reais do mercado e consolidou sua visão profissional.
-                    <br><br>
-                    Hoje, seu trabalho é focado em entregar sites funcionais, bem feitos e alinhados às necessidades de cada cliente, indo além da estética para gerar <span style="color: #00ffff;">resultados reais</span>. Em constante evolução e com feedbacks positivos, a AuGitDev nasce com o propósito de unir <span style="color: #00ffff;">profissionalismo, dedicação e foco</span> no cliente para criar presenças digitais que fazem a diferença.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="arrow"></span>    Por que ter um site profissional?</summary>
-                <div class="conteudoSum">
-                    <p ><span style="font-weight: 600;">Ter um site bem feito vai além de estar online. Ele é <span style="color: #00ffff;">essencial</span> para o sucesso de sua estratégia digital. Aqui estão os principais benefícios:</span>
-                        <br><br>
-                     <i class="fa-solid fa-circle-check" style="color: #00ffff;"></i> <span style="font-weight: 600;">Visibilidade 24/7</span> <br>
-                                Seu negócio disponível o tempo todo, acessível de qualquer lugar.
-                                <br><br>
-                                <i class="fa-solid fa-circle-check" style="color: #00ffff;"></i> <span style="font-weight: 600;">Credibilidade e Confiança</span>
-                                <br>
-                                Sites profissionais geram mais confiança e destacam sua marca.
-                                <br><br>
-                                <i class="fa-solid fa-circle-check" style="color: #00ffff;"></i> <span style="font-weight: 600;">Alcance Global</span>
-                                <br>
-                                Expanda sua audiência além das fronteiras físicas.
-                                <br><br>
-                                <i class="fa-solid fa-circle-check" style="color: #00ffff;"></i> <span style="font-weight: 600;">Facilidade de Comunicação</span>
-                                <br>
-                                Ofereça canais de contato direto com seus clientes.
-                                <br><br>
-                                <i class="fa-solid fa-circle-check" style="color: #00ffff;"></i> <span style="font-weight: 600;">Oportunidade de Vendas</span>
-                                <br>
-                                Converta visitantes em clientes com um site otimizado e de alta performance.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="arrow"></span>
-                    Quais tipos de trabalho fazemos?
-                </summary>
-                <div class="conteudoSum">
-                    <p><i class="fa-solid fa-money-bill-transfer" style="color: #00ffff;"></i> <span style="font-weight: 600;">Landing Pages de Alta Conversão:</span>
-                        <br>
-                    Páginas estratégicas criadas para gerar contatos, atrair clientes e aumentar resultados, com foco total em conversão.
-                    <br><br>
-                    <i class="fa-solid fa-mobile-screen-button" style="color: #00ffff;"></i> <span style="font-weight: 600;">Design Responsivo:</span>
-                    <br>
-                    Seu site adaptado para celulares, tablets e computadores, garantindo uma navegação perfeita em qualquer dispositivo.
-                    <br><br>
-                    <i class="fa-solid fa-face-grin-stars" style="color: #00ffff;"></i> <span style="font-weight: 600;">Experiência Visual Moderna:</span>
-                    <br>
-                    Layouts modernos, animações suaves e interações que tornam o site mais atrativo, profissional e agradável para o visitante.
-                    <br><br>
-                    <i class="fa-solid fa-blog" style="color: #00ffff;"></i> <span style="font-weight: 600;">Páginas de Conteúdo e Blogs:</span>
-                    <br>
-                    Criação de páginas e blogs profissionais para apresentar serviços, compartilhar conteúdos e fortalecer sua marca online.
-                    <br><br>
-                    <i class="fa-solid fa-eye-dropper" style="color: #00ffff;"></i> <span style="font-weight: 600;">Funcionalidades Personalizadas:</span>
-                    <br>
-                    Recursos sob medida para atender às necessidades do seu negócio, como formulários inteligentes, áreas interativas e soluções personalizadas para o seu site.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="arrow"></span>    Meu site vai aparecer no Google?</summary>
-                <div class="conteudoSum">
-                    <p style="font-weight: 600;">Os sites são entregues com estrutura otimizada para mecanismos de busca, facilitando o posicionamento no Google ao longo do tempo.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="arrow"></span>    Quanto custa um site?</summary>
-                <div class="conteudoSum">
-                    <p style="font-weight: 600;">O valor depende do tipo de site, número de páginas e necessidades do projeto. Após entender o que você precisa, enviamos uma proposta personalizada e sem compromisso.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="arrow"></span>    Em quanto tempo o site fica pronto?</summary>
-                <div class="conteudoSum">
-                    <p style="font-weight: 600;">O prazo varia conforme o projeto, mas a maioria dos sites é entregue em poucos dias após o alinhamento das informações.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="arrow"></span>
-                    O site funciona no celular?</summary>
-                <div class="conteudoSum">
-                    <p style="font-weight: 600;">Sim. Todos os sites são desenvolvidos para funcionar perfeitamente em celulares, tablets e computadores.</p>
-                </div>
-            </details>
-            <details>
-                <summary><span class="arrow"></span>    Posso pedir alterações antes da entrega?</summary>
-                <div class="conteudoSum">
-                    <p style="font-weight: 600;">Sim. Durante o desenvolvimento, você pode solicitar ajustes para garantir que o site fique exatamente como imaginou.</p>
-                </div>
-            </details>
+        
+    </div>
+</section>
+<section>
+    <div class="p-4 pt-12 text-white">
+        <p class="esconder" data-anim="apareceresq">Oferta especial</p>
+        <h1 class="text-3xl md:text-5xl font-bold esconder" data-anim="apareceresq">PORQUE TER UM <span class="text-cyan-500">SITE?</span></h1>
+        <p class="text-gray-400 esconder" data-anim="apareceresq">Ter uma presença digital de alto nível é muito mais do que apenas existir na rede; é o alicerce de qualquer estratégia de sucesso. Um site desenvolvido com excelência oferece vantagens competitivas cruciais, como:</p>
+    </div>
+    <div class="text-white p-4 flex flex-col grid md:grid-cols-3 gap-4">
+        <div class="esconder" data-anim="aparecer">
+            <p class="font-semibold"><i class="fa-solid fa-square-check" style="color: rgba(0, 184, 219, 1.00);"></i> Visibilidade 24/7</p>
+            <p class="text-gray-400">Seu negócio disponível o tempo todo, acessível de qualquer lugar.</p>
         </div>
-
-    </section>
-    <footer>
-        <div class="footer">
-            <div class="infos">
-                <!--<div class="logoimg">
-                    <img src="logoimg.png" alt="">
-                </div>
-                !-->
-                <div class="inf1">
-                    <p><i class="fa-solid fa-map-location" style="color: #64b4f1;"></i> Guarulhos - Sao Paulo</p>
-                </div>
-                 <div class="footer-divider"></div>
-                <div class="inf2">
-                    <p><i class="fa-solid fa-envelope"></i> teixeira.dev15@gmail.com</p>
-                    <p><i class="fa-solid fa-briefcase"></i> Augitdev — Desenvolvedor Web</p>
-                </div>
-            </div>
-            <div class="copy">
-                <p>© Copyright 2026 Todos os direitos reservados.</p>
-            </div>
-            <div class="funcionamento">
-                <div>
-                    <p><span>HORÁRIO DE FUNCIONAMENTO</span></p>
-                    <p id="pf">Segunda a Sábado – 08h às 20:00h</p>
-                </div>
-                <div class="iconsl">
-                    <a href="https://www.instagram.com/augitdev_/"><i class="fa-brands fa-square-instagram fa-2x" style="color: #00ffff;"></i></a>
-                    <a href="https://wa.me/5511985149353?text=Olá! Vi seu site e gostaria de um orçamento para um projeto."><i class="fa-brands fa-square-whatsapp fa-2x" style="color: #00ffff;"></i></a>
-                    <a href="mailto:teixeira.dev15@gmail.com"><i class="fa-solid fa-square-envelope fa-2x" style="color: #00ffff;"></i></a>
-                </div>
-
-            </div>
+        <div class="esconder" data-anim="aparecer">
+            <p class="font-semibold"><i class="fa-solid fa-square-check" style="color: rgba(0, 184, 219, 1.00);"></i> Credibilidade e Confiança</p>
+            <p class="text-gray-400">Sites profissionais geram mais confiança e destacam sua marca.</p>
         </div>
-    </footer>
+        <div class="esconder" data-anim="aparecer">
+            <p class="font-semibold"><i class="fa-solid fa-square-check" style="color: rgba(0, 184, 219, 1.00);"></i> Alcance Global</p>
+            <p class="text-gray-400">Expanda sua audiência além das fronteiras físicas.</p>
+        </div>
+        <div class="esconder" data-anim="aparecer">
+            <p class="font-semibold"><i class="fa-solid fa-square-check" style="color: rgba(0, 184, 219, 1.00);"></i> Facilidade de Comunicação</p>
+            <p class="text-gray-400">Ofereça canais de contato direto com seus clientes.</p>
+        </div>
+        <div class="esconder" data-anim="aparecer">
+            <p class="font-semibold"><i class="fa-solid fa-square-check" style="color: rgba(0, 184, 219, 1.00);"></i> Oportunidade de Vendas:</p>
+            <p class="text-gray-400">Converta visitantes em clientes com um site otimizado e de alta performance.</p>
+        </div>
+        <div class="esconder" data-anim="aparecer">
+            <p class="font-semibold"><i class="fa-solid fa-square-check" style="color: rgba(0, 184, 219, 1.00);"></i> Autoridade no Google (SEO):</p>
+            <p class="text-gray-400"> Apareça para quem já está procurando pelo seu serviço e domine os resultados de busca.</p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="text-center w-full flex flex-col">
+        <div class="w-full p-4 pt-30 text-center">
+            <h1 class="w-full text-center text-white uppercase font-bold text-3xl md:text-5xl esconder" data-anim="aparecer">Leve o seu negócio para o próximo nível digital.</h1>
+            <p class="text-white text-gray-400 pt-4 esconder" data-anim="aparecer">Vamos conversar? Clique abaixo e descubra como transformar sua marca em uma máquina de resultados online.</p>
+        </div>
+        <div class="py-15 w-full flex justify-center px-4">
+            <a href="" class="w-full max-w-lg text-white bg-cyan-500 text-center p-2 px-4 rounded-xl font-semibold tracking-widest esconder" data-anim="aparecer">Fazer orçamento gratuito</a>
+        </div>
+    </div>
+    <div class="text-white">
+        <hr class="text-gray-600 mx-4">
+        <p class="py-5 text-center text-sm">Todos os direitos reservados</p>
+    </div>
+</section>
 
-    <script>
-document.querySelectorAll('.faq details').forEach(details => {
-  const content = details.querySelector('.conteudoSum')
 
-  details.addEventListener('toggle', () => {
-    if (details.open) {
-      content.style.height = '0'
-      content.style.opacity = '0'
+</main>
 
-      requestAnimationFrame(() => {
-        content.style.height = content.scrollHeight + 'px'
-        content.style.opacity = '1'
-      })
 
-      content.addEventListener('transitionend', function handler() {
-        content.style.height = 'auto'
-        content.removeEventListener('transitionend', handler)
-      })
+<script>
+    const observer = new IntersectionObserver((entries) => {
+  // Filtra apenas os elementos que acabaram de entrar na tela
+  const entrando = entries.filter(entry => entry.isIntersecting);
 
-    } else {
-      content.style.height = content.scrollHeight + 'px'
+  entrando.forEach((entry, index) => {
+    
+    const animacao = entry.target.getAttribute('data-anim');
 
-      requestAnimationFrame(() => {
-        content.style.height = '0'
-        content.style.opacity = '0'
-      })
-    }
-  })
-})
-const faqs = document.querySelectorAll('.faq details')
+    
+    setTimeout(() => {
+      if (animacao) {
+        entry.target.classList.add(animacao);
+      }
+      entry.target.classList.remove('esconder');
+      observer.unobserve(entry.target);
+    }, index * 150); 
+  });
+}, { 
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px' 
+});
 
-faqs.forEach(item => {
-  item.addEventListener('toggle', () => {
-    if (item.open) {
-      faqs.forEach(other => {
-        if (other !== item) {
-          other.removeAttribute('open')
-        }
-      })
-    }
-  })
-})
+document.querySelectorAll('.esconder').forEach(el => observer.observe(el));
 </script>
 
-
 </body>
+
+
+
+
 </html>
