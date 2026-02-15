@@ -90,7 +90,7 @@
                 </div>
                 </a>
 
-                <a href="" class="text-base border border-2 border-cyan-500 p-2 rounded text-cyan-500 font-semibold flex items-center cursor-pointer esconder" data-anim="aparecerdir"><img src="send.svg" alt="" class="pr-1">Fazer um orçamento</a>
+                <a href="" onclick="enviarWhatsapp()" class="text-base border border-2 border-cyan-500 p-2 rounded text-cyan-500 font-semibold flex items-center cursor-pointer esconder" data-anim="aparecerdir"><img src="send.svg" alt=""  class="pr-1">Fazer um orçamento</a>
             </nav>
         </div>
     </section>
@@ -99,7 +99,7 @@
             <h1 class="text-white text-4xl  font-bold px-4 pt-4 md:text-5xl pb-4 esconder" data-anim="apareceresq">Posicione sua <span class="text-cyan-500">marca</span> no <span class="text-cyan-500">topo</span> e aumente seus orçamentos</h1>
             <h4 class="text-white px-4 esconder" data-anim="apareceresq" data-aos-delay="100">Unimos design de elite e tecnologia de ponta para criar a presença digital que sua empresa merece. Pare de perder vendas por ter um site amador.</h4>
             <div class="flex justify-center hidden md:flex md:justify-start p-4">
-                <a href="" class="w-xs p-2 bg-cyan-500 text-center rounded-xl my-2 font-bold text-gray-200 tracking-widest esconder" data-anim="apareceresq">Fazer um orçamento Gratuito<i class="fa-solid fa-arrow-right"></i></a>
+                <a href="" onclick="enviarWhatsapp()" class="w-xs p-2 bg-cyan-500 text-center rounded-xl my-2 font-bold text-gray-200 tracking-widest esconder" data-anim="apareceresq">Fazer um orçamento Gratuito<i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="text-gray-400 font-semibold p-1 px-2 ml-4 mt-4 border rounded-full border-2 border-cyan-500 w-max md:hidden cursor-default esconder" data-anim="apareceresq">+20 Clientes Satisfeitos   </div>
         </div>
@@ -109,7 +109,7 @@
             <div class="absolute border border-2 text-white font-bold border-cyan-500 p-4 rounded-full invisible md:visible md:bottom-10 md:left-[-20px] cursor-default" data-aos="fade-up-left" data-aos-delay="100">+20 Clientes satisfeitos</div>
         </div>
         <div class="w-full flex justify-center md:hidden">
-            <a href="" class="w-xs p-2 bg-cyan-500 text-center rounded-xl my-2 font-semibold text-white tracking-widest esconder" data-anim="aparecer">Fazer um orçamento gratuito<i class="fa-solid fa-arrow-right" style="padding-left: 10px;"></i></a>
+            <a href="" onclick="enviarWhatsapp()" class="w-xs p-2 bg-cyan-500 text-center rounded-xl my-2 font-semibold text-white tracking-widest esconder" data-anim="aparecer">Fazer um orçamento gratuito<i class="fa-solid fa-arrow-right" style="padding-left: 10px;"></i></a>
         </div>
     </section>
     <section class="pt-12 bg-[url('pasta_imagens/bg1.webp')]  bg-cover">
@@ -157,7 +157,7 @@
             <p class="esconder" class="pb-8 text-xl font-normal" data-anim="apareceresq">Se <span class="font-bold">você sente que seu faturamento está em risco</span>, clique abaixo e construa seu terreno próprio na internet hoje mesmo.</p>
             
             <div class="flex justify-center md:justify-start w-full">
-                <a href="" class="w-full md:w-76 bg-cyan-500 text-center rounded-xl p-3 font-semibold tracking-widest hover:bg-cyan-400 transition-all esconder" data-anim="apareceresq">
+                <a href="" onclick="enviarWhatsapp()" class="w-full md:w-76 bg-cyan-500 text-center rounded-xl p-3 font-semibold tracking-widest hover:bg-cyan-400 transition-all esconder" data-anim="apareceresq">
                     Fazer orçamento Gratuito<i class="fa-solid fa-arrow-right pl-2"></i>
                 </a>
             </div>
@@ -216,7 +216,7 @@
 
             <span class="esconder" data-anim="aparecer">Reconhecido pela excelência e entrega impecável, Augusto prova que o sucesso digital vem do compromisso e da técnica. Ele representa o novo empreendedorismo de São Paulo, sendo a escolha ideal para marcas que buscam inovação e profissionalismo real.</span></p>
             <div class="w-full flex justify-center pt-2">
-                <a href="" class="w-full bg-cyan-500 text-center p-2 rounded-xl font-semibold tracking-widest esconder" data-anim="aparecer"
+                <a href="" onclick="enviarWhatsapp()" class="w-full bg-cyan-500 text-center p-2 rounded-xl font-semibold tracking-widest esconder" data-anim="aparecer"
                 >Fazer orçamento</a>
             </div>
         </div>
@@ -263,7 +263,7 @@
             <p class="text-white text-gray-400 pt-4 esconder" data-anim="aparecer">Vamos conversar? Clique abaixo e descubra como transformar sua marca em uma máquina de resultados online.</p>
         </div>
         <div class="py-15 w-full flex justify-center px-4">
-            <a href="" class="w-full max-w-lg text-white bg-cyan-500 text-center p-2 px-4 rounded-xl font-semibold tracking-widest esconder" data-anim="aparecer">Fazer orçamento gratuito</a>
+            <a href="" onclick="enviarWhatsapp()" class="w-full max-w-lg text-white bg-cyan-500 text-center p-2 px-4 rounded-xl font-semibold tracking-widest esconder" data-anim="aparecer">Fazer orçamento gratuito</a>
         </div>
     </div>
     <div class="text-white">
@@ -300,6 +300,20 @@
 });
 
 document.querySelectorAll('.esconder').forEach(el => observer.observe(el));
+</script>
+<script>
+    function enviarWhatsapp() {
+  const fone = "5511985149353"; // Seu número com DDD
+  const msg = "Olá! Gostaria de saber mais sobre o serviço.";
+  
+  // encodeURIComponent limpa a mensagem para o formato de link (tira espaços e caracteres especiais)
+  const textoSimples = encodeURIComponent(msg);
+  
+  const url = `https://api.whatsapp.com/send?phone=${fone}&text=${textoSimples}`;
+  
+  // Abre em uma nova aba
+  window.open(url, '_blank');
+}
 </script>
 </body>
 </html>
