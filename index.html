@@ -13,8 +13,14 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="finisher-header.es5.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
     <title></title>
     <style>
+        
         body{
             overflow-x: hidden;
         }
@@ -76,7 +82,10 @@
         }
     </style>
 </head>
-<body class="relative bg-[#0E111C] flex justify-center">
+
+<body class="relative bg-[#0E111C] flex justify-center ">
+<div id="smooth-wrapper">
+<div id="smooth-content">
 <main class="max-w-7xl">
     <section class="">
         <div>
@@ -274,6 +283,8 @@
 
 
 </main>
+</div>
+</div>
 
 
 <script>
@@ -315,5 +326,17 @@ document.querySelectorAll('.esconder').forEach(el => observer.observe(el));
   window.open(url, '_blank');
 }
 </script>
+<script>
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollSmoother.create({
+  wrapper: "#smooth-wrapper",
+  content: "#smooth-content",
+  smooth: 1.5, // Aumentei um pouco para o efeito ser mais visível
+  effects: true,
+  smoothTouch: 0.1
+});
+</script>
+
 </body>
 </html>
