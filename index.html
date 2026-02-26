@@ -17,7 +17,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-<script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
+
     <title></title>
     <style>
         
@@ -326,17 +326,7 @@ document.querySelectorAll('.esconder').forEach(el => observer.observe(el));
   window.open(url, '_blank');
 }
 </script>
-<script>
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-ScrollSmoother.create({
-  wrapper: "#smooth-wrapper",
-  content: "#smooth-content",
-  smooth: 1.5, // Aumentei um pouco para o efeito ser mais visível
-  effects: true,
-  smoothTouch: 0.1
-});
-</script>
 
 </body>
 </html>
