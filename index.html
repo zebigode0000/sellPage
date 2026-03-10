@@ -209,6 +209,69 @@
         </div>
     </div>
 </section>
+<section class="relative  max-w-6xl mx-auto py-20 px-6 font-sans">
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <div class="absolute  bottom-40 -left-40 w-80 h-80 bg-cyan-500/30 rounded-full blur-[100px]"></div>
+            </div>
+            
+            <div class="flex flex-col text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-center text-white mb-2">Como Funciona a Criação do seu Site</h2> 
+                <span class="text-gray-400">Do planejamento ao lançamento: Um processo claro e estruturado para transformar a presença digital da sua empresa em uma máquina de vendas.</span>
+            </div>
+            
+        
+    <div class="relative z-10">
+        <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-[2px] h-full bg-cyan-500"></div>
+        
+        <div class="lg:hidden absolute left-4 w-[2px] h-full bg-cyan-500"></div>
+
+        <div class="space-y-12 lg:space-y-0 lg:relative lg:h-[800px]">
+            
+      <div class="relative">
+          <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-[2px] h-full bg-white/10"></div>
+    
+          <div id="neon-line" class="hidden lg:block absolute left-1/2 -translate-x-1/2 w-[2px] h-0 bg-cyan-500 shadow-cyan-500 z-0"></div>
+
+      </div>
+            <div class="relative flex lg:block items-start lg:absolute lg:top-[5%] lg:left-0 lg:w-[45%] z-10">
+                <div class="ml-10 lg:ml-0 lg:text-right bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-cyan-500 hover:scale-102 transition-all duration-100 ease-in z-10">
+                    <span class="text-cyan-500 font-bold text-sm uppercase tracking-widest">Passo 01</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Briefing e Estratégia</h3>
+                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">Conversa inicial para entender o seu modelo de negócio, público-alvo e os objetivos principais que o site precisa converter.</p>
+                </div>
+                <div class="absolute left-4 lg:left-auto lg:-right-[calc(11.1%+8px)] top-8 lg:top-1/2 w-4 h-4 bg-cyan-500 rounded-full neon border-4 border-black z-10"></div>
+            </div>
+
+            <div class="relative flex lg:block items-start lg:absolute lg:top-[28%] lg:right-0 lg:w-[45%] ">
+                <div class="ml-10 lg:ml-0 bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-cyan-500 hover:scale-102 transition-all duration-100 ease-in z-10">
+                    <span class="text-cyan-500 font-bold text-sm uppercase tracking-widest">Passo 02</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Design e Identidade</h3>
+                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">Criação do layout visual (UI/UX) focado na experiência do usuário, garantindo que o site seja moderno, profissional e fiel à sua marca.</p>
+                </div>
+                <div class="absolute left-4 lg:-left-[calc(11.1%+8px)] top-8 lg:top-1/2 w-4 h-4 bg-cyan-500 rounded-full neon border-4 border-black z-10"></div>
+            </div>
+
+            <div class="relative flex lg:block items-start lg:absolute lg:top-[52%] lg:left-0 lg:w-[45%]">
+                <div class="ml-10 lg:ml-0 lg:text-right bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-cyan-500 hover:scale-102 transition-all duration-100 ease-in">
+                    <span class="text-cyan-500 font-bold text-sm uppercase tracking-widest">Passo 03</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Desenvolvimento e SEO</h3>
+                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">Transformação do design em código com foco em velocidade de carregamento e otimização para o Google.</p>
+                </div>
+                <div class="absolute left-4 lg:left-auto lg:-right-[calc(11.1%+8px)] top-8 lg:top-1/2 w-4 h-4 bg-cyan-500 rounded-full neon border-4 border-black z-10"></div>
+            </div>
+
+            <div class="relative flex lg:block items-start lg:absolute lg:top-[75%] lg:right-0 lg:w-[45%]">
+                <div class="ml-10 lg:ml-0 bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:border-cyan-500 hover:scale-102 transition-all duration-100 ease-in">
+                    <span class="text-cyan-500 font-bold text-sm uppercase tracking-widest">Passo 04</span>
+                    <h3 class="text-xl font-bold text-white mt-1">Entrega</h3>
+                    <p class="text-gray-400 mt-3 text-sm leading-relaxed">Publicação do site no domínio oficial e testes finais de responsividade</p>
+                </div>
+                <div class="absolute left-4 lg:-left-[calc(11.1%+8px)] top-8 lg:top-1/2 w-4 h-4 bg-cyan-500 rounded-full neon border-4 border-black z-10"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <section>
     <div class="w-full pt-12 flex flex-col p-4 md:w-2/2 md:flex-row md:gap-4">
         <div class="w-full esconder" data-anim="apareceresq">
@@ -284,6 +347,9 @@
 </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
 
 <script>
     const observer = new IntersectionObserver((entries) => {
@@ -324,7 +390,32 @@ document.querySelectorAll('.esconder').forEach(el => observer.observe(el));
   window.open(url, '_blank');
 }
 </script>
+<script>
+    // Animação da Linha Neon
+gsap.to("#neon-line", {
+    height: "100%", // Faz a linha crescer até o final
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".relative", // O container da sua timeline
+        start: "top 60%",     // Começa quando o topo da timeline chega a 60% da tela
+        end: "bottom 80%",    // Termina quando o final da timeline chega a 80% da tela
+        scrub: true           // Sincroniza o progresso com o movimento do scroll
+    }
+});
 
+// Opcional: Fazer os pontos "acenderem" quando a linha passar por eles
+gsap.utils.toArray(".neon").forEach(point => {
+    gsap.to(point, {
+        backgroundColor: "#00B8DB", // Cor verde neon
+        boxShadow: "0 0 20px #00B8DB",
+        scrollTrigger: {
+            trigger: point,
+            start: "top 70%",
+            toggleActions: "play reverse play reverse"
+        }
+    });
+});
+</script>
 
 </body>
 </html>
